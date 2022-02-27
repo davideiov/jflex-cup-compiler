@@ -1,0 +1,5 @@
+SDK: Oracle OpenSDK 12.0.2
+Language level: SDK default (12)
+
+Modifiche apportate ai test:
+Sostituzione di 'integer' con 'int'.

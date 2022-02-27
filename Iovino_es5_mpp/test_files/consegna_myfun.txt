@@ -1,0 +1,79 @@
+# funzioni di supporto
+fun add(real a, real b):real
+	return a + b;
+end fun;
+
+fun mult(int a, int b):int
+	int i := 0;
+	int result := 0;
+	while i < b loop
+		result := result + a;
+		i := i + 1;
+	end loop;
+	return result;
+end fun;
+
+fun division(real a, real b):int
+	return a div b;
+end fun;
+
+fun myPow(real a, real b):real
+	return a ^ b;
+end fun;
+
+fun fibonacci(int a):int
+	if a <= 1 then
+		return a;
+	end if;
+
+	return fibonacci(a-1) + fibonacci(a-2);
+end fun;
+
+main
+    string ans;
+    real real_a, real_b, real_result := -1.0;
+    int int_a, int_b, int_result := -1;
+
+    ?. 'Benvenuto, inserire il numero corrispondente per effettuare la scelta!';
+    ?. '1. la somma di due numeri';
+   	?. '2. la moltiplicazione di due numeri utilizzando la somma';
+   	?. '3. la divisione intera fra due numeri positivi';
+   	?. "4. l’elevamento a potenza";
+   	?. '5. la successione di Fibonacci';
+   	?. '';
+
+    % ans;
+
+   	if ans = '1' then
+   		% real_a "inserisci il primo valore:\t";
+   		% real_b "inserisci il secondo valore:\t";
+   		real_result := add(real_a, real_b);
+   	end if;
+
+   	if ans = '2' then
+   		% int_a "inserisci il primo valore:\t";
+   		% int_b "inserisci il secondo valore:\t";
+   		int_result := mult(int_a, int_b);
+   	end if;
+
+   	if ans = '3' then
+   		% real_a "inserisci il primo valore:\t";
+   		% real_b "inserisci il secondo valore:\t";
+   		int_result := division(real_a, real_b);
+   	end if;
+
+   	if ans = '4' then
+   		% real_a "inserisci il primo valore:\t";
+   		% real_b "inserisci il secondo valore:\t";
+   		real_result := myPow(real_a, real_b);
+   	end if;
+
+   	if ans = '5' then
+   		% int_a "inserisci l'n-esimo numero di fibonacci che si vuole ottenere:\t";
+   		int_result := fibonacci(int_a);
+   	end if;
+
+   	?. "Real result: " & real_result;
+   	?. "Int result: " & int_result;
+
+end main;
